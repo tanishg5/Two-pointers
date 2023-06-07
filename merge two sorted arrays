@@ -1,0 +1,23 @@
+void solve ( ) {
+     vector<ll>a(n),b(m);
+     vector<ll>c(n + m);
+    ll i = 0 , j = 0 , k = 0 ;
+    while(i<n && j<m) {
+       if(a[i]<b[j]) {
+        c[k] = a[i];
+        i++;
+        k++;
+       }
+       else {
+        c[k] = b[j];
+        j++;
+        k++;
+       }
+    }
+   while(i<n) { 
+     c[k] = a[i] , k++; i++;
+    }
+    while(j<n) {
+      c[k] = b[j];
+    }
+  }
